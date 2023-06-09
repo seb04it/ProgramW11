@@ -83,11 +83,11 @@ namespace ProgramW11
             statistics.Min = float.MaxValue;
             statistics.Average = 0;
 
-            for (var counter0 = 0; counter0 < this.grades.Count; counter0++)
+            for (var counter = 0; counter < this.grades.Count; counter++)
             {
-                statistics.Max = Math.Max(statistics.Max, grades[counter0]);
-                statistics.Min = Math.Min(statistics.Min, grades[counter0]);
-                statistics.Average += grades[counter0];
+                statistics.Max = Math.Max(statistics.Max, grades[counter]);
+                statistics.Min = Math.Min(statistics.Min, grades[counter]);
+                statistics.Average += grades[counter];
             }
             statistics.Average /= this.grades.Count;
             return statistics;
@@ -99,15 +99,15 @@ namespace ProgramW11
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
             statistics.Average = 0;
-            var counter1 = 0;
+            var counter = 0;
 
             do
             {
-                statistics.Max = Math.Max(statistics.Max, grades[counter1]);
-                statistics.Min = Math.Min(statistics.Min, grades[counter1]);
-                statistics.Average += grades[counter1];
-                counter1++;
-            } while (counter1 < this.grades.Count);
+                statistics.Max = Math.Max(statistics.Max, grades[counter]);
+                statistics.Min = Math.Min(statistics.Min, grades[counter]);
+                statistics.Average += grades[counter];
+                counter++;
+            } while (counter < this.grades.Count);
 
             statistics.Average /= this.grades.Count;
             return statistics;
@@ -119,14 +119,14 @@ namespace ProgramW11
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
             statistics.Average = 0;
-            var counter2 = 0;
+            var counter = 0;
 
-            while (counter2 < this.grades.Count)
+            while (counter < this.grades.Count)
             {
-                statistics.Max = Math.Max(statistics.Max, grades[counter2]);
-                statistics.Min = Math.Min(statistics.Min, grades[counter2]);
-                statistics.Average += grades[counter2];
-                counter2++;
+                statistics.Max = Math.Max(statistics.Max, grades[counter]);
+                statistics.Min = Math.Min(statistics.Min, grades[counter]);
+                statistics.Average += grades[counter];
+                counter++;
             }
             statistics.Average /= this.grades.Count;
             return statistics;
